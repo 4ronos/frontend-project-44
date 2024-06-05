@@ -1,10 +1,7 @@
-import readlineSync from 'readline-sync';
+#!/usr/bin/env node
+import gameBody from '../src/gameBody.js';
+import { brainCalc } from '../src/index.js';
 
-const greeting = () => {
-    console.log('Welcome to the Brain Games!');
-    const name = readlineSync.question ('May I have your name? ');
-    console.log(`Hello, ${name}!`);
-    return name;
-};
+const description = 'What is the result of the expression?';
 
-export default greeting;
+gameBody(description, brainCalc);
